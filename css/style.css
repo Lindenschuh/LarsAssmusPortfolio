@@ -1,6 +1,7 @@
 :root {
     --default-text-color: #555;
     --darker-text-color: #111;
+    --favorite-color: #53bd3f;
 }
 
 body {
@@ -34,8 +35,8 @@ ul {
 
 
 /* HEADING */
-header .header_title {
-    font-size: xx-large;
+.header_title {
+    font-size: 3em;
     padding: 1em 0;
 }
 
@@ -45,43 +46,67 @@ header .header_title {
     grid-gap: 2em;
     margin-bottom: 2em;
 }
+
 .header_description_text {
-    font-size: larger;
-}
-.header_description > img {
-    width: 100%;
-    max-width: 16em;
+    font-size: 1.5em;
+    align-self: center;
 }
 
-.table_content {
+.profile_picture {
     width: 100%;
+    max-width: 12em;
+    justify-self: center;
 }
 
 /* SECTION */
 section {
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 5fr;
 }
 
 
 .skill_table {
     width: 100%;
     display: flex;
-    flex-grow: 1;
+    flex-flow: wrap;
+    justify-content: flex-start;
 }
 
 .skill_table > * {
-    margin-right: .8em;
-    padding: .3em;
+    padding: 0 2em;
 }
 
-.content {
-
+.title {
+    color: var(--favorite-color);
+    text-align: right;
 }
+
+.label {
+    font-size: 1.3em;
+}
+
+.table_label span {
+    margin: 0 .3em;
+}
+
+
+.sideline {
+    border-left: .15em solid var(--favorite-color);
+    padding-left: 2em;
+    margin-left: 2em;
+}
+
+.video {
+    display: grid;
+    grid-template-columns: 5fr 3fr;
+    grid-gap: 2em;
+}
+
 /* YOUTUBE */
 
 .youtube_wrapper {
     position: relative;
+    min-width: 500px;
     width: 100%;
     height: 0;
     padding-top: 51%;
@@ -93,4 +118,26 @@ iframe {
     height: 100%;
     top: 0;
     left: 0;
+}
+
+
+/* FOOTER */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.acknowledgements > div {
+    max-width: 12em;
+    margin: .4em 0;
+}
+
+.social_media > * {
+    margin: 0 1em;
+}
+
+.social_media a {
+    color: var(--favorite-color);
 }
