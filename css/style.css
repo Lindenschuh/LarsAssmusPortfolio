@@ -1,7 +1,10 @@
 :root {
     --default-text-color: #555;
     --darker-text-color: #111;
-    --favorite-color: #53bd3f;
+    --emerald: #50C878;
+    --jade: #00A86B;
+
+    --favorite-color: var(--jade);
 }
 
 body {
@@ -15,13 +18,13 @@ body > * {
 }
 
 a {
-    color: var(--darker-text-color);
+    color: var(--favorite-color);
     text-decoration: none;
     font-weight: bolder;
 }
 
 strong {
-    color: var(--darker-text-color);
+    color: var(--favorite-color);
 }
 
 
@@ -35,6 +38,15 @@ ul {
 
 
 /* HEADING */
+header {
+    padding-right: 20%;
+    padding-bottom:35%;
+    padding-top:15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .header_title {
     font-size: 3em;
     padding: 1em 0;
@@ -81,6 +93,13 @@ section {
     text-align: right;
 }
 
+.sideline {
+    border-left: .15em solid var(--favorite-color);
+    padding-left: 2em;
+    margin-left: 2em;
+}
+
+
 .label {
     font-size: 1.3em;
 }
@@ -89,24 +108,18 @@ section {
     margin: 0 .3em;
 }
 
-
-.sideline {
-    border-left: .15em solid var(--favorite-color);
-    padding-left: 2em;
-    margin-left: 2em;
-}
-
 .video {
     display: grid;
     grid-template-columns: 5fr 3fr;
     grid-gap: 2em;
 }
 
+
 /* YOUTUBE */
 
 .youtube_wrapper {
     position: relative;
-    min-width: 500px;
+    min-width: 300px;
     width: 100%;
     height: 0;
     padding-top: 51%;
@@ -124,6 +137,7 @@ iframe {
 /* FOOTER */
 footer {
     display: flex;
+    flex-flow: wrap;
     justify-content: space-between;
     align-items: center;
 }
@@ -131,13 +145,63 @@ footer {
 
 .acknowledgements > div {
     max-width: 12em;
-    margin: .4em 0;
+    margin: .7em 0;
+}
+
+.social_media {
+    margin: 2em 0;
+    display: flex;
+    flex-flow: wrap;
 }
 
 .social_media > * {
-    margin: 0 1em;
+    margin: .3em 1em;
 }
 
-.social_media a {
-    color: var(--favorite-color);
+
+/* MOBILE OPTIMISATIONS */
+
+@media screen and (max-width: 750px) {
+
+
+    body > section {
+        padding: 0 1em;
+    }
+
+    .header_description {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        grid-template-columns: 1fr;
+    }
+
+    .title {
+        text-align: center;
+        margin-bottom: 3em;
+        padding-bottom: .5em;
+        border-bottom: .15em solid var(--favorite-color);
+    }
+
+    .sideline {
+        border: none;
+        margin-left: 0;
+        padding: 0;
+    }
+
+    footer {
+        justify-content: center;
+    }
+
+    .acknowledgements > div {
+        max-width: none;
+    }
 }
+
+@media screen and (max-width: 900px) {
+    .video {
+        grid-template-columns: 1fr;
+    }
+}
+
+
