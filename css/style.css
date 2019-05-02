@@ -110,7 +110,7 @@ section {
 }
 
 
-.content {
+.video-content {
     display: grid;
     grid-row-gap: 2em;
 }
