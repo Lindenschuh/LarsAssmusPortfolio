@@ -170,6 +170,16 @@ footer {
     margin: .3em 1em;
 }
 
+.social_media svg {
+    width: 100%;
+    max-width: 48px;
+    fill: var(--default-text-color);
+}
+
+
+.social_media svg:hover {
+    fill: var(--favorite-color);
+}
 
 /* MOBILE OPTIMISATIONS */
 
